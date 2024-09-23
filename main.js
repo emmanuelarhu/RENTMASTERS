@@ -76,3 +76,62 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+
+
+
+
+
+// Function to animate counting
+function animateCounter(element, target, duration) {
+  let start = 0;
+  const end = parseInt(target.replace(/[km]+$/i, ''), 10);
+  const suffix = target.match(/[km]+$/i) ? target.match(/[km]+$/i)[0].toLowerCase() : '';
+  const range = end - start;
+  const increment = end > start ? 1 : -1;
+  const stepTime = Math.abs(Math.floor(duration / range));
+  const timer = setInterval(() => {
+      start += increment;
+      const progress = Math.min(Math.abs(start), end);
+      element.textContent = formatNumber(progress, suffix);
+      if (progress === end) {
+          clearInterval(timer);
+      }
+  }, stepTime);
+}
+
+// Function to format number with suffix
+function formatNumber(num, suffix) {
+  if (suffix === 'K') {
+      return (num / 1000).toFixed(num < 100 ? 1 : 0) + 'K';
+  } else if (suffix === 'M') {
+      return (num / 1000000).toFixed(1) + 'M';
+  }
+  return num.toString();
+}
+
+// Function to check if an element is in viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to start animation when element is in viewport
+function startAnimationOnView() {
+  const banner = document.querySelector('.menu__banner');
+  if (isInViewport(banner) && !banner.classList.contains('animated')) {
+      banner.classList.add('animated');
+      const counters = banner.querySelectorAll('h4');
+      counters.forEach(counter => {
+          animateCounter(counter, counter.textContent, 3000); // 3000ms duration
+      });
+  }
+}
+
+// Listen for scroll and load events
+window.addEventListener('scroll', startAnimationOnView);
+window.addEventListener('load', startAnimationOnView);
