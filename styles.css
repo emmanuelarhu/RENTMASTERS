@@ -802,3 +802,106 @@ nav {
     gap: 2rem;
   }
 }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            display: block;
+            width: 25%;
+            padding: 10px;
+            background-color: #f6ac0f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #db9a0c;
+        }
+
+
+        
+
+
+
+
+
+
+
+
+
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      
+      .gallery {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+      h1 {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      
+      .gallery-item {
+          display: inline-block;
+          width: calc(33.33% - 20px); /* 3 items per row */
+          margin: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          border-radius: 8px;
+          overflow: hidden;
+          transition: transform 0.3s;
+      }
+      
+      .gallery-item img {
+          width: 100%;
+          height: auto;
+      }
+      
+      .gallery-item:hover {
+          transform: scale(1.05);
+      }
