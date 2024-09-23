@@ -52,3 +52,27 @@ ScrollReveal().reveal(".news__card", {
   ...scrollRevealOption,
   interval: 500,
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const bookNowBtn = document.getElementById('bookNowBtn');
+  
+  if (bookNowBtn) {
+      bookNowBtn.addEventListener('click', function() {
+          // Replace 'YOUR_GOOGLE_FORM_URL' with the actual URL of your Google Form
+          window.open('https://forms.gle/iDSQyCLz2gMPqCr57', '_blank');
+      });
+  }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const bookNowBtn1 = document.getElementById('bookNowBtn1');
+  
+  if (bookNowBtn1) {
+      bookNowBtn1.addEventListener('click', function() {
+          // Replace 'YOUR_GOOGLE_FORM_URL' with the actual URL of your Google Form
+          window.open('https://forms.gle/iDSQyCLz2gMPqCr57', '_blank');
+      });
+  }
+});
