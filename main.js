@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (bookNowBtn) {
       bookNowBtn.addEventListener('click', function() {
           // Replace 'YOUR_GOOGLE_FORM_URL' with the actual URL of your Google Form
-          window.open('https://forms.gle/iDSQyCLz2gMPqCr57', '_blank');
+          window.open('https://forms.gle/y4BXSKo852Me7ZoEA', '_blank');
       });
   }
 });
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (bookNowBtn1) {
       bookNowBtn1.addEventListener('click', function() {
           // Replace 'YOUR_GOOGLE_FORM_URL' with the actual URL of your Google Form
-          window.open('https://forms.gle/iDSQyCLz2gMPqCr57', '_blank');
+          window.open('https://forms.gle/y4BXSKo852Me7ZoEA', '_blank');
       });
   }
 });
