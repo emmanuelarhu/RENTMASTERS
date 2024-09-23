@@ -20,6 +20,18 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  const takeTourBtn = document.getElementById('takeTourBtn');
+  const menuSection = document.getElementById('menu');
+
+  takeTourBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      menuSection.scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
 // header container
 ScrollReveal().reveal(".header__container .section__subheader", {
   ...scrollRevealOption,
