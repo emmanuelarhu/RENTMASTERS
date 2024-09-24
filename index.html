@@ -27,7 +27,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#room">Room</a></li>
           <li><a href="#feature">Feature</a></li>
-          <li><a href="#menu">Gallery</a></li>
           <li><a href="#news">News</a></li>
         </ul>
       </div>
@@ -38,7 +37,17 @@
         <!-- <p class="section__subheader">ABOUT US</p> -->
 
         <h1>Your Hostel Issues,<br />Are Our Priority</h1>
-        <br><button class="btn" id="takeTourBtn">Take A Tour</button>
+        <br>
+        <button class="btnn" id="takeTourBtn">Take A Tour</button>
+
+        <script>
+          document.getElementById('takeTourBtn').addEventListener('click', function() {
+            document.getElementById('tourSection').scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+          </script>
+
       </div>
     </header>
 
@@ -72,26 +81,26 @@
             <span><i class="ri-user-line"></i></span>
             <h4>Strong Team</h4>
             <p>
-              Unlocking Hospitality Excellence And Ensures Your Perfect Stay
+              Our dedicated team of professionals is the bedrock of Rent Masters' success.
+
             </p>
           </div>
           <div class="about__image">
-            <img src="assets/about-2.jpg" alt="about" />
+            <img src="assets/IMG-20240924-WA0014.jpg" alt="about"/>
           </div>
           <div class="about__card">
             <span><i class="ri-calendar-check-line"></i></span>
             <h4>Luxury Room</h4>
-            <p>Experience Unrivaled Luxury at Our Exquisite Luxury Rooms</p>
+            <p>Experience the pinnacle of student accommodation in our Luxury Rooms. 
+            </p>
           </div>
         </div>
         <div class="about__content">
           <p class="section__subheader">ABOUT US</p>
           <h2 class="section__header">Discover Our Underground</h2>
           <p class="section__description">
-            Welcome to a hidden realm of extraordinary accommodations where
-            luxury, comfort, and adventure converge. Our underground Hostels
-            offer an unparalleled escape from the ordinary, inviting you to
-            explore a subterranean world of wonders.
+            Welcome to Rent Masters, where we've redefined student living with our innovative underground hostels. Our unique concept offers a blend of comfort, privacy, and community in a setting like no other.
+
           </p>
           <button class="btn" id="bookNowBtn">Book Now</button>
         </div>
@@ -103,7 +112,7 @@
       <h2 class="section__header">GCTU Students Hostel</h2>
       <div class="room__grid">
         <div class="room__card">
-          <img src="assets/1.jpg" alt="room" />
+          <img src="assets/1.jpg" alt="room" width="300" height="470" />
           <div class="room__card__details">
             <div>
               <h4>International Students Hostel</h4>
@@ -113,7 +122,7 @@
           </div>
         </div>
         <div class="room__card">
-          <img src="assets/2.jpg" alt="room" />
+          <img src="assets/2.jpg" alt="room" width="300" height="470" />
           <div class="room__card__details">
             <div>
               <h4>TF Hostel</h4>
@@ -124,7 +133,7 @@
           </div>
         </div>
         <div class="room__card">
-          <img src="assets/3.jpg" alt="room" width="300" height="410"/>
+          <img src="assets/3.jpg" alt="room" width="300" height="470"/>
           <div class="room__card__details">
             <div>
               <h4>Tesano Palace</h4>
@@ -144,7 +153,7 @@
       <div class="section__container intro__container">
         <div class="intro__cotent">
           <p class="section__subheader">INTRO VIDEO</p>
-          <h2 class="section__header">Welcome to Rent Masters!</h2>
+          <h2 class="section__header" al >Welcome to Rent Masters!</h2>
           <p class="section__description">
             Looking for a cozy place to stay or an exciting adventure? Rent Masters has it all! 
             Our hostels offer the perfect mix of comfort and fun, whether you want a peaceful retreat or a chance to explore.
@@ -166,48 +175,42 @@
           <span><i class="ri-thumb-up-line"></i></span>
           <h4>Have High Rating</h4>
           <p>
-            We take pride in curating a selection of Hostels that consistently
-            receive high ratings and positive reviews.
+            Ensuring the hostel has consistently positive reviews and high ratings for its facilities.
           </p>
         </div>
         <div class="feature__card">
           <span><i class="ri-time-line"></i></span>
           <h4>Quite Hours</h4>
           <p>
-            We understand that peace and uninterrupted rest are essential for a
-            rejuvenating experience.
+            Offering uninterrupted rest and peace to students, which is essential for a good study environment.
           </p>
         </div>
         <div class="feature__card">
           <span><i class="ri-map-pin-line"></i></span>
           <h4>Best Location</h4>
           <p>
-            At our Hostel booking website, we take pride in offering
-            accommodations in the most prime and sought-after locations.
+            Providing accommodation in prime and convenient locations, likely close to educational institutions.
           </p>
         </div>
         <div class="feature__card">
           <span><i class="ri-close-circle-line"></i></span>
           <h4>Free Cancellation</h4>
           <p>
-            We understand that travel plans can change unexpectedly, which is
-            why we offer the flexibility of free cancellation.
+            Offering flexibility with free cancellations for students who may have changing schedules.
           </p>
         </div>
         <div class="feature__card">
           <span><i class="ri-wallet-line"></i></span>
           <h4>Payment Options</h4>
           <p>
-            Our Hostel booking website offers a range of convenient payment
-            options to suit your preferences.
+            Facilitating various convenient payment methods, making it easy for students to manage their stay.
           </p>
         </div>
         <div class="feature__card">
           <span><i class="ri-coupon-line"></i></span>
           <h4>Special Offers</h4>
           <p>
-            Whether you're planning a romantic getaway, or a business trip, our
-            carefully curated special offers cater to all your needs.
+            Offering customized deals and promotions tailored to the needs of students, such as discounts or package deals.
           </p>
         </div>
       </div>
@@ -239,10 +242,10 @@
   </div> 
 
   <br>
-        <div class="menu__images">
-          <img src="assets/Couch 2.jpg" alt="menu" />
-          <img src="assets/Bedroom 3.jpg" alt="menu" />
-          <img src="assets/Bed Area.jpg" alt="menu" />
+        <div class="menu__images" id="tourSection">
+          <img src="assets/Couch 2.jpg" alt="menu" width="200" height="500"/>
+          <img src="assets/Bedroom 3.jpg" alt="menu" width="200" height="500" />
+          <img src="assets/Bed Area.jpg" alt="menu" width="200" height="500" />
         </div>
 
         <ul class="menu__banner">
@@ -283,7 +286,7 @@
       </div>
       <div class="news__grid">
         <div class="news__card">
-          <img src="assets/news-1.jpg" alt="news" />
+          <img src="assets/IMG-20240924-WA0011.jpg" alt="news" width="300" height="250" />
           <div class="news__card__title">
             <p>25th August 2024</p>
             <p>By Arhu</p>
@@ -295,7 +298,7 @@
           </p>
         </div>
         <div class="news__card">
-          <img src="assets/news-2.jpg" alt="news" />
+          <img src="assets/IMG-20240924-WA0015.jpg" alt="news" width="300" height="250" />
           <div class="news__card__title">
             <p>15th September 2024</p>
             <p>By Akyeam</p>
@@ -307,7 +310,7 @@
           </p>
         </div>
         <div class="news__card">
-          <img src="assets/news-3.jpg" alt="news" />
+          <img src="assets/IMG-20240924-WA0013.jpg" alt="news" width="300" height="250" />
           <div class="news__card__title">
             <p>08th September 2024</p>
             <p>By Arhu</p>
@@ -336,7 +339,7 @@
               <a href="https://www.youtube.com/channel/UCT4urTMuEEDfrPqdctSFoNg"><i class="ri-youtube-fill"></i></a>
             </li>
             <li>
-              <a href="https://x.com/gctuonline?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.instagram.com/gctu_official/"><i class="ri-instagram-line"></i></a>
             </li>
             <li>
               <a href="https://www.facebook.com/gctuonline/"><i class="ri-facebook-fill"></i></a>
